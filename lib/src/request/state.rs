@@ -51,7 +51,7 @@ use http::Status;
 /// }
 /// ```
 #[derive(Debug, PartialEq, Eq)]
-pub struct State<'r, T: Send + Sync + 'static>(&'r T);
+pub struct State<'r, T: Send + Sync + 'static>(pub &'r T);
 
 impl<'r, T: Send + Sync + 'static> State<'r, T> {
     /// Retrieve a borrow to the underyling value.
