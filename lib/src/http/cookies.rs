@@ -235,7 +235,7 @@ impl<'a> Cookies<'a> {
                 cookie.set_path("/");
             }
 
-            if cookie.http_only().is_none() {
+            if cookie.http_only() {
                 cookie.set_http_only(true);
             }
 
